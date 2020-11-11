@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import logo from "./logo/the-godfather.svg";
+import data from "./data/EmployeeData.json";
+
 
 function App() {
+
+  const myData = data.employees;
+  const listItems = myData.map(item =>
+        <div className="employee">
+              <a>{item.name}</a>
+       </div>
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="banner">
+    <div className="dash-board">
+      <div className="left-col">
+        <img src={logo} alt="Logo" className="logo"></img>
+        <div className="data-list">{listItems}</div>
+      </div>
+      <div className="right-col">
+
+      </div>
+    </div>
     </div>
   );
 }

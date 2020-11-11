@@ -9,7 +9,7 @@ function App() {
   const myData = data.employees;
   const listItems = myData.map(item =>
         <div className="employee">
-              <a>{item.name}</a>
+              <a href="#">{item.name}</a>
        </div>
   );
 
